@@ -18,7 +18,6 @@ clicked2.onclick = function(element) {
     });
   });
 };*/
-
 let cap = document.getElementById("caps");
 cap.addEventListener("click", function() {
   console.log("cap clicked");
@@ -26,11 +25,10 @@ cap.addEventListener("click", function() {
     chrome.tabs.executeScript(tabs[0].id, { file: "content1.js" });
   });
 });
-
 let defau = document.getElementById("default");
 defau.addEventListener("click", function() {
   console.log("default clicked");
   chrome.tabs.query({ currentWindow: true, active: true }, function(tabs) {
-    chrome.tabs.executeScript(tabs[0].id, { file: "content2.js" });
+    chrome.tabs.executeScript(tabs[0].id, { code: "location.reload();" });
   });
 });
