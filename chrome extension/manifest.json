@@ -1,0 +1,31 @@
+{
+  "name": "Vowel Highlighter",
+  "version": "1.0",
+  "description": "Converts all vowels in a page to CAPITAL LETTERS",
+  "permissions": [
+    "tabs",
+    "notifications",
+    "declarativeContent",
+    "storage",
+    "activeTab",
+    "<all_urls>"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content3.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/images.png"
+    }
+  },
+  "icons": {
+    "48": "icons/images.png"
+  },
+
+  "manifest_version": 2
+}
